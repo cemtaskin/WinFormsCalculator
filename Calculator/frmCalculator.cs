@@ -64,5 +64,10 @@ namespace Calculator
         {
             Result = (double)FirstNumber / (double)SecondNumber;
         }
+
+        private void cbOperation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(cbOperation.SelectedIndex.ToString());
+        }
     }
 }

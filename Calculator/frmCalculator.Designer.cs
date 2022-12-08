@@ -39,6 +39,7 @@ namespace Calculator
             this.btnSubstract = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
             this.btnDiv = new System.Windows.Forms.Button();
+            this.cbOperation = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblFirstNumber
@@ -133,11 +134,26 @@ namespace Calculator
             this.btnDiv.UseVisualStyleBackColor = true;
             this.btnDiv.Click += new System.EventHandler(this.btnDiv_Click);
             // 
+            // cbOperation
+            // 
+            this.cbOperation.FormattingEnabled = true;
+            this.cbOperation.Items.AddRange(new object[] {
+            "Add",
+            "Substract",
+            "Multiply",
+            "Division"});
+            this.cbOperation.Location = new System.Drawing.Point(291, 12);
+            this.cbOperation.Name = "cbOperation";
+            this.cbOperation.Size = new System.Drawing.Size(121, 21);
+            this.cbOperation.TabIndex = 10;
+            this.cbOperation.SelectedIndexChanged += new System.EventHandler(this.cbOperation_SelectedIndexChanged);
+            // 
             // frmCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(254, 182);
+            this.ClientSize = new System.Drawing.Size(632, 205);
+            this.Controls.Add(this.cbOperation);
             this.Controls.Add(this.btnDiv);
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnSubstract);
@@ -170,6 +186,7 @@ namespace Calculator
         private System.Windows.Forms.Button btnSubstract;
         private System.Windows.Forms.Button btnMultiply;
         private System.Windows.Forms.Button btnDiv;
+        private System.Windows.Forms.ComboBox cbOperation;
     }
 }
 
